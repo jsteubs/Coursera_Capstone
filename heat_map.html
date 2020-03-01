@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fea91217c72a451598862d32c8a48db5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_fea91217c72a451598862d32c8a48db5" ></div>
+        
+</body>
+<script>    
+    
+            var map_fea91217c72a451598862d32c8a48db5 = L.map(
+                "map_fea91217c72a451598862d32c8a48db5",
+                {
+                    center: [38.895, -77.0366],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_50d6f1d390ca48aba6e9004464d17d01 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        function geo_json_f3d77c4508904b9cb956e01669aab44d_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_fea91217c72a451598862d32c8a48db5.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_f3d77c4508904b9cb956e01669aab44d = L.geoJson(null, {
+                onEachFeature: geo_json_f3d77c4508904b9cb956e01669aab44d_onEachFeature,
+            
+        });
+        function geo_json_f3d77c4508904b9cb956e01669aab44d_add (data) {
+            geo_json_f3d77c4508904b9cb956e01669aab44d.addData(data)
+                .addTo(map_fea91217c72a451598862d32c8a48db5);
+        }
+            geo_json_f3d77c4508904b9cb956e01669aab44d_add({"features": [{"geometry": {"coordinates": [[[-77.01426, 38.92629, 0], [-77.01673, 38.92746, 0], [-77.01802, 38.92861, 0], [-77.01802, 38.92931, 0], [-77.01913, 38.93414, 0], [-77.01928, 38.93689, 0], [-77.01901, 38.93738, 0], [-77.02428, 38.93634, 0], [-77.02546, 38.93519, 0], [-77.03274, 38.93711, 0], [-77.03407, 38.93738, 0], [-77.03639, 38.93748, 0], [-77.03639, 38.93824, 0], [-77.03926, 38.93688, 0], [-77.04222, 38.93604, 0], [-77.04527, 38.93581, 0], [-77.04797, 38.93511, 0], [-77.04883, 38.93426, 0], [-77.05048, 38.93322, 0], [-77.05071, 38.93274, 0], [-77.05053, 38.93239, 0], [-77.04721, 38.93145, 0], [-77.04618, 38.93049, 0], [-77.04514, 38.92931, 0], [-77.04457, 38.92822, 0], [-77.04452, 38.92781, 0], [-77.0449, 38.92666, 0], [-77.04628, 38.92598, 0], [-77.04772, 38.9271, 0], [-77.04916, 38.92811, 0], [-77.04942, 38.92815, 0], [-77.04967, 38.92805, 0], [-77.0498, 38.92771, 0], [-77.04957, 38.92654, 0], [-77.04909, 38.92542, 0], [-77.04866, 38.92458, 0], [-77.04842, 38.92357, 0], [-77.04852, 38.92274, 0], [-77.04915, 38.92207, 0], [-77.04974, 38.92167, 0], [-77.05014, 38.92119, 0], [-77.04875, 38.91895, 0], [-77.04767, 38.91835, 0], [-77.04634, 38.91608, 0], [-77.04617, 38.91451, 0], [-77.04124, 38.91701, 0], [-77.03197, 38.91701, 0], [-77.03197, 38.91407, 0], [-77.02089, 38.91404, 0], [-77.020919, 38.915454, 0], [-77.02064, 38.91564, 0], [-77.01686, 38.91424, 0], [-77.0142, 38.91491, 0], [-77.01519, 38.92065, 0], [-77.01214, 38.92128, 0], [-77.01222, 38.92623, 0], [-77.01426, 38.92629, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 1"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-77.03183, 38.91407, 0], [-77.03205, 38.91698, 0], [-77.04119, 38.91698, 0], [-77.04626, 38.91467, 0], [-77.0463, 38.91601, 0], [-77.04785, 38.91851, 0], [-77.04904, 38.91915, 0], [-77.05038, 38.92168, 0], [-77.05119, 38.92092, 0], [-77.05235, 38.92002, 0], [-77.05419, 38.91962, 0], [-77.05527, 38.91878, 0], [-77.05677, 38.91828, 0], [-77.05806, 38.91768, 0], [-77.05921, 38.91838, 0], [-77.06801, 38.91861, 0], [-77.06732, 38.91778, 0], [-77.06887, 38.91708, 0], [-77.06956, 38.91791, 0], [-77.06961, 38.91681, 0], [-77.072, 38.91651, 0], [-77.07257, 38.91674, 0], [-77.07484, 38.91631, 0], [-77.07488, 38.91671, 0], [-77.07574, 38.91695, 0], [-77.07579, 38.91731, 0], [-77.08171, 38.91728, 0], [-77.08063, 38.91507, 0], [-77.07934, 38.91347, 0], [-77.07922, 38.9126, 0], [-77.07968, 38.91177, 0], [-77.07909, 38.9114, 0], [-77.07801, 38.90943, 0], [-77.07797, 38.90676, 0], [-77.07746, 38.90208, 0], [-77.07625, 38.90182, 0], [-77.07505, 38.90148, 0], [-77.07321, 38.90118, 0], [-77.07106, 38.90111, 0], [-77.06926, 38.90062, 0], [-77.06874, 38.90035, 0], [-77.06814, 38.89984, 0], [-77.06767, 38.89934, 0], [-77.06742, 38.89788, 0], [-77.06758, 38.89754, 0], [-77.06578, 38.89464, 0], [-77.06552, 38.8943, 0], [-77.06505, 38.89293, 0], [-77.06433, 38.89116, 0], [-77.06436, 38.89073, 0], [-77.06389, 38.89063, 0], [-77.06407, 38.89026, 0], [-77.06424, 38.88956, 0], [-77.06424, 38.88879, 0], [-77.06385, 38.88789, 0], [-77.06312, 38.88722, 0], [-77.06278, 38.88672, 0], [-77.06243, 38.88608, 0], [-77.06124, 38.88435, 0], [-77.0599, 38.88201, 0], [-77.05887, 38.8806, 0], [-77.05818, 38.88031, 0], [-77.05746, 38.88021, 0], [-77.05604, 38.88024, 0], [-77.05527, 38.88, 0], [-77.05269, 38.8778, 0], [-77.05149, 38.87623, 0], [-77.05145, 38.87543, 0], [-77.05171, 38.87439, 0], [-77.05166, 38.87359, 0], [-77.05068, 38.87212, 0], [-77.04978, 38.87138, 0], [-77.04793, 38.87132, 0], [-77.0463, 38.87232, 0], [-77.04643, 38.87282, 0], [-77.04638, 38.87386, 0], [-77.04698, 38.87453, 0], [-77.04694, 38.87509, 0], [-77.04626, 38.87563, 0], [-77.04523, 38.87529, 0], [-77.04342, 38.87352, 0], [-77.042, 38.87252, 0], [-77.04042, 38.87081, 0], [-77.03939, 38.86921, 0], [-77.03845, 38.86788, 0], [-77.03788, 38.86523, 0], [-77.03784, 38.86454, 0], [-77.03853, 38.86397, 0], [-77.03956, 38.86383, 0], [-77.04059, 38.8638, 0], [-77.04162, 38.86363, 0], [-77.04226, 38.86367, 0], [-77.04252, 38.86343, 0], [-77.03965, 38.862, 0], [-77.03827, 38.86176, 0], [-77.03793, 38.86133, 0], [-77.03664, 38.86069, 0], [-77.03557, 38.85995, 0], [-77.03479, 38.85865, 0], [-77.03274, 38.85494, 0], [-77.02042, 38.85678, 0], [-77.02072, 38.87018, 0], [-77.0245, 38.87643, 0], [-77.03033, 38.88094, 0], [-77.02755, 38.88214, 0], [-77.01313, 38.88251, 0], [-77.00909, 38.88164, 0], [-77.00896, 38.89196, 0], [-77.01522, 38.89206, 0], [-77.01643, 38.89166, 0], [-77.0239, 38.89383, 0], [-77.02385, 38.89614, 0], [-77.01986, 38.89617, 0], [-77.01986, 38.90366, 0], [-77.01638, 38.90492, 0], [-77.01625, 38.90729, 0], [-77.0154, 38.90723, 0], [-77.01815, 38.91471, 0], [-77.02063, 38.915638, 0], [-77.020855, 38.915546, 0], [-77.020887, 38.91406, 0], [-77.03183, 38.91407, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 2"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-77.1178436017092, 38.9359974626892, 0], [-77.11985, 38.93444, 0], [-77.11879, 38.93374, 0], [-77.1181, 38.9329, 0], [-77.11741, 38.93157, 0], [-77.11668, 38.93057, 0], [-77.11634, 38.92883, 0], [-77.11578, 38.92806, 0], [-77.11467, 38.92686, 0], [-77.1138, 38.92616, 0], [-77.11282, 38.92472, 0], [-77.1123, 38.92432, 0], [-77.11174, 38.92366, 0], [-77.11135, 38.92345, 0], [-77.10792, 38.92078, 0], [-77.10762, 38.92035, 0], [-77.10625, 38.91901, 0], [-77.10578, 38.91801, 0], [-77.10565, 38.91754, 0], [-77.10518, 38.91714, 0], [-77.10509, 38.91668, 0], [-77.10415, 38.91608, 0], [-77.10393, 38.91514, 0], [-77.1035, 38.91444, 0], [-77.10355, 38.91341, 0], [-77.10282, 38.9125, 0], [-77.10196, 38.91197, 0], [-77.10028, 38.91074, 0], [-77.0999, 38.91017, 0], [-77.09912, 38.90966, 0], [-77.09848, 38.9089, 0], [-77.09737, 38.90826, 0], [-77.09681, 38.90766, 0], [-77.09248, 38.90532, 0], [-77.09178, 38.90522, 0], [-77.0911, 38.90459, 0], [-77.09033, 38.90435, 0], [-77.08934, 38.90395, 0], [-77.08801, 38.90322, 0], [-77.08694, 38.90312, 0], [-77.0863, 38.90285, 0], [-77.08514, 38.90255, 0], [-77.08089, 38.90242, 0], [-77.07759, 38.90212, 0], [-77.07801, 38.9093, 0], [-77.07904, 38.91137, 0], [-77.07981, 38.91173, 0], [-77.07922, 38.91267, 0], [-77.07934, 38.91344, 0], [-77.08055, 38.91497, 0], [-77.08174, 38.91724, 0], [-77.07574, 38.91731, 0], [-77.07569, 38.91688, 0], [-77.07479, 38.91668, 0], [-77.07479, 38.91631, 0], [-77.07265, 38.91678, 0], [-77.072, 38.91654, 0], [-77.06961, 38.91684, 0], [-77.06948, 38.91795, 0], [-77.06879, 38.91721, 0], [-77.06737, 38.91774, 0], [-77.0681, 38.91861, 0], [-77.05947, 38.91851, 0], [-77.05806, 38.91771, 0], [-77.05522, 38.91885, 0], [-77.05419, 38.91965, 0], [-77.05226, 38.92005, 0], [-77.05042, 38.92158, 0], [-77.049437, 38.92194, 0], [-77.04827, 38.92322, 0], [-77.049866, 38.927549, 0], [-77.04963, 38.928017, 0], [-77.049179, 38.928134, 0], [-77.046196, 38.925964, 0], [-77.04493, 38.926665, 0], [-77.0445249582144, 38.9277766166895, 0], [-77.04448, 38.9279, 0], [-77.045166, 38.929369, 0], [-77.047226, 38.931422, 0], [-77.050488, 38.932373, 0], [-77.050745, 38.932807, 0], [-77.050488, 38.933241, 0], [-77.048793, 38.93441, 0], [-77.048042, 38.935044, 0], [-77.04763, 38.93597, 0], [-77.04767, 38.93691, 0], [-77.04875, 38.93774, 0], [-77.04991, 38.93754, 0], [-77.05094, 38.93774, 0], [-77.05171, 38.93798, 0], [-77.05158, 38.93868, 0], [-77.05128, 38.93978, 0], [-77.05055, 38.94192, 0], [-77.04999, 38.94305, 0], [-77.04947, 38.94335, 0], [-77.04978, 38.94418, 0], [-77.04862, 38.94499, 0], [-77.04827, 38.94552, 0], [-77.04785, 38.94585, 0], [-77.04729, 38.94592, 0], [-77.0463, 38.94589, 0], [-77.04595, 38.94612, 0], [-77.04523, 38.94712, 0], [-77.04467, 38.94769, 0], [-77.04445, 38.94812, 0], [-77.04497, 38.94839, 0], [-77.04557, 38.94826, 0], [-77.04608, 38.94802, 0], [-77.0466, 38.94852, 0], [-77.04664, 38.94919, 0], [-77.04643, 38.94989, 0], [-77.04587, 38.95026, 0], [-77.04463, 38.95136, 0], [-77.04437, 38.95219, 0], [-77.04394, 38.95273, 0], [-77.04205, 38.95423, 0], [-77.04188, 38.95483, 0], [-77.042, 38.95637, 0], [-77.04188, 38.95694, 0], [-77.04188, 38.95777, 0], [-77.04115, 38.95834, 0], [-77.04064, 38.95897, 0], [-77.04033, 38.9598, 0], [-77.04085, 38.9603, 0], [-77.04184, 38.9606, 0], [-77.04303, 38.96134, 0], [-77.04411, 38.96097, 0], [-77.0454, 38.9606, 0], [-77.0472, 38.96027, 0], [-77.04879, 38.9606, 0], [-77.04991, 38.96144, 0], [-77.05115, 38.96207, 0], [-77.05334, 38.96131, 0], [-77.05621, 38.96097, 0], [-77.05604, 38.95871, 0], [-77.05686, 38.95814, 0], [-77.05724, 38.95684, 0], [-77.05797, 38.9567, 0], [-77.05956, 38.95777, 0], [-77.06312, 38.95793, 0], [-77.06514, 38.95847, 0], [-77.07012, 38.96965, 0], [-77.07162, 38.97185, 0], [-77.1178436017092, 38.9359974626892, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 3"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-77.07149, 38.97185, 0], [-77.07012, 38.96965, 0], [-77.06514, 38.95854, 0], [-77.06338, 38.95797, 0], [-77.05964, 38.95767, 0], [-77.05806, 38.95667, 0], [-77.05724, 38.95677, 0], [-77.05681, 38.958, 0], [-77.05621, 38.95864, 0], [-77.05625, 38.96094, 0], [-77.05325, 38.96134, 0], [-77.05123, 38.96194, 0], [-77.04879, 38.96081, 0], [-77.04707, 38.96024, 0], [-77.04338, 38.96141, 0], [-77.04192, 38.96064, 0], [-77.04076, 38.96027, 0], [-77.04025, 38.9599, 0], [-77.04033, 38.9592, 0], [-77.04081, 38.95877, 0], [-77.04136, 38.95817, 0], [-77.04192, 38.95777, 0], [-77.04192, 38.9562, 0], [-77.04175, 38.95483, 0], [-77.04196, 38.9543, 0], [-77.04373, 38.95296, 0], [-77.04445, 38.95219, 0], [-77.04471, 38.95166, 0], [-77.04484, 38.95106, 0], [-77.0454, 38.95043, 0], [-77.0463, 38.94996, 0], [-77.04664, 38.94949, 0], [-77.04647, 38.94866, 0], [-77.04592, 38.94822, 0], [-77.04523, 38.94836, 0], [-77.04454, 38.94816, 0], [-77.04441, 38.94776, 0], [-77.04523, 38.94719, 0], [-77.04579, 38.94605, 0], [-77.04617, 38.94575, 0], [-77.04741, 38.94589, 0], [-77.04806, 38.94582, 0], [-77.04832, 38.94542, 0], [-77.04853, 38.94488, 0], [-77.04978, 38.94418, 0], [-77.04947, 38.94342, 0], [-77.05007, 38.94295, 0], [-77.05059, 38.94178, 0], [-77.05098, 38.94128, 0], [-77.05094, 38.94055, 0], [-77.05119, 38.93961, 0], [-77.05171, 38.93874, 0], [-77.05184, 38.93835, 0], [-77.05136, 38.93781, 0], [-77.0505, 38.93764, 0], [-77.04827, 38.93767, 0], [-77.04767, 38.93687, 0], [-77.04763, 38.93557, 0], [-77.047698, 38.935182, 0], [-77.0461, 38.935599, 0], [-77.045258, 38.935824, 0], [-77.042216, 38.93605, 0], [-77.039271, 38.936888, 0], [-77.037088, 38.937998, 0], [-77.036412, 38.938257, 0], [-77.03638, 38.937493, 0], [-77.034073, 38.937414, 0], [-77.029631, 38.936296, 0], [-77.025468, 38.935244, 0], [-77.024374, 38.936346, 0], [-77.021499, 38.936897, 0], [-77.019074, 38.937414, 0], [-77.017593, 38.937865, 0], [-77.01522, 38.93981, 0], [-77.01424, 38.94118, 0], [-77.01351, 38.94208, 0], [-77.01278, 38.94265, 0], [-77.01223, 38.94385, 0], [-77.0112, 38.94452, 0], [-77.00866, 38.94632, 0], [-77.00888, 38.95476, 0], [-77.0033, 38.95617, 0], [-77.00235, 38.95697, 0], [-77.00003, 38.9555, 0], [-76.99866, 38.9568, 0], [-76.99639, 38.9573, 0], [-76.99179, 38.95723, 0], [-77.04111, 38.99597, 0], [-77.07149, 38.97185, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 4"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-76.99171, 38.9572, 0], [-76.99673, 38.9573, 0], [-76.99763, 38.95717, 0], [-76.99858, 38.9568, 0], [-77.00021, 38.9553, 0], [-77.00235, 38.9569, 0], [-77.00334, 38.9562, 0], [-77.00883, 38.9548, 0], [-77.00862, 38.94702, 0], [-77.00866, 38.94632, 0], [-77.00927, 38.94575, 0], [-77.01085, 38.94459, 0], [-77.01171, 38.94418, 0], [-77.01236, 38.94352, 0], [-77.01278, 38.94261, 0], [-77.01364, 38.94195, 0], [-77.01437, 38.94112, 0], [-77.01527, 38.93978, 0], [-77.01759, 38.93781, 0], [-77.01905, 38.93738, 0], [-77.01922, 38.93517, 0], [-77.01896, 38.93367, 0], [-77.01776, 38.92869, 0], [-77.01802, 38.92803, 0], [-77.01682, 38.9276, 0], [-77.01522, 38.92663, 0], [-77.0139, 38.92636, 0], [-77.0121, 38.92626, 0], [-77.01213, 38.92135, 0], [-77.01265, 38.92135, 0], [-77.01368, 38.92095, 0], [-77.01501, 38.92065, 0], [-77.01432, 38.91494, 0], [-77.016735, 38.914244, 0], [-77.0181, 38.91477, 0], [-77.0154, 38.90726, 0], [-77.01351, 38.9072, 0], [-77.01364, 38.90593, 0], [-77.00463, 38.909, 0], [-76.98381, 38.90005, 0], [-76.97634, 38.89891, 0], [-76.96957, 38.89764, 0], [-76.96197, 38.89707, 0], [-76.96189, 38.90074, 0], [-76.96021, 38.90232, 0], [-76.95772, 38.9072, 0], [-76.95399, 38.91233, 0], [-76.95287, 38.91464, 0], [-76.94583, 38.91531, 0], [-76.94193, 38.91841, 0], [-76.99171, 38.9572, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 5"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-77.020386, 38.856785, 0], [-77.009094, 38.863201, 0], [-77.002655, 38.871086, 0], [-76.993729, 38.86985, 0], [-76.977982, 38.876801, 0], [-76.973221, 38.878571, 0], [-76.968758, 38.88345, 0], [-76.965195, 38.886723, 0], [-76.963478, 38.889866, 0], [-76.973907, 38.890099, 0], [-76.974075, 38.892403, 0], [-76.975105, 38.893303, 0], [-76.977211, 38.893436, 0], [-76.977295, 38.896042, 0], [-76.976608, 38.898914, 0], [-76.983772, 38.900082, 0], [-76.993172, 38.904022, 0], [-77.004547, 38.908936, 0], [-77.013733, 38.905792, 0], [-77.013603, 38.90723, 0], [-77.01622, 38.907265, 0], [-77.016258, 38.904892, 0], [-77.019913, 38.903625, 0], [-77.019913, 38.896111, 0], [-77.023941, 38.896145, 0], [-77.023903, 38.893837, 0], [-77.016434, 38.891731, 0], [-77.01532, 38.892101, 0], [-77.008797, 38.892002, 0], [-77.009094, 38.881615, 0], [-77.01326, 38.882481, 0], [-77.02755, 38.882114, 0], [-77.030296, 38.880943, 0], [-77.024506, 38.876469, 0], [-77.020767, 38.870354, 0], [-77.020386, 38.856785, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 6"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-76.941887, 38.918484, 0], [-76.945663, 38.915211, 0], [-76.952873, 38.914677, 0], [-76.953995, 38.912273, 0], [-76.957687, 38.907265, 0], [-76.960091, 38.90239, 0], [-76.961891, 38.900784, 0], [-76.961975, 38.898514, 0], [-76.962021, 38.897213, 0], [-76.969574, 38.897743, 0], [-76.976395, 38.898914, 0], [-76.977257, 38.896442, 0], [-76.977165, 38.893505, 0], [-76.974937, 38.893303, 0], [-76.974075, 38.891499, 0], [-76.973991, 38.890099, 0], [-76.963432, 38.889694, 0], [-76.965584, 38.886154, 0], [-76.973221, 38.878407, 0], [-76.977943, 38.876736, 0], [-76.970901, 38.87326, 0], [-76.970818, 38.868382, 0], [-76.980774, 38.868248, 0], [-76.984116, 38.866711, 0], [-76.978973, 38.865707, 0], [-76.972878, 38.863167, 0], [-76.970734, 38.864105, 0], [-76.969009, 38.860764, 0], [-76.967812, 38.860229, 0], [-76.968071, 38.858025, 0], [-76.962151, 38.851875, 0], [-76.909531, 38.892967, 0], [-76.941887, 38.918484, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 7"}, "type": "Feature"}, {"geometry": {"coordinates": [[[-76.977943, 38.876801, 0], [-76.99382, 38.86985, 0], [-77.002701, 38.871086, 0], [-77.009094, 38.863201, 0], [-77.02047, 38.856819, 0], [-77.032745, 38.854946, 0], [-77.032356, 38.851875, 0], [-77.03257, 38.846859, 0], [-77.03476, 38.83984, 0], [-77.045097, 38.840042, 0], [-77.046432, 38.840176, 0], [-77.0457, 38.838402, 0], [-77.045357, 38.837299, 0], [-77.045403, 38.835594, 0], [-77.044029, 38.833324, 0], [-77.04364, 38.83202, 0], [-77.042953, 38.831219, 0], [-77.041885, 38.831451, 0], [-77.042572, 38.83329, 0], [-77.041969, 38.833591, 0], [-77.039093, 38.831818, 0], [-77.037888, 38.829979, 0], [-77.038879, 38.824429, 0], [-77.039566, 38.824028, 0], [-77.03965, 38.823727, 0], [-77.041069, 38.823257, 0], [-77.040977, 38.822121, 0], [-77.039734, 38.821655, 0], [-77.039566, 38.821255, 0], [-77.039909, 38.820683, 0], [-77.03978, 38.820217, 0], [-77.038704, 38.81908, 0], [-77.038918, 38.81871, 0], [-77.038574, 38.817074, 0], [-77.038193, 38.815571, 0], [-77.036087, 38.814667, 0], [-77.039268, 38.80032, 0], [-77.039009, 38.791725, 0], [-76.962318, 38.851807, 0], [-76.967979, 38.858025, 0], [-76.968109, 38.86026, 0], [-76.968887, 38.860699, 0], [-76.969185, 38.8615, 0], [-76.970901, 38.864174, 0], [-76.972145, 38.863735, 0], [-76.972832, 38.863102, 0], [-76.978928, 38.865677, 0], [-76.984421, 38.866676, 0], [-76.981033, 38.868248, 0], [-76.970901, 38.868382, 0], [-76.970818, 38.873394, 0], [-76.977943, 38.876801, 0]]], "type": "Polygon"}, "properties": {"name": "Ward 8"}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            var circle_marker_7dbce09457da469f8cb827d4df58d8fb = L.circleMarker(
+                [38.85565773, -76.98034771],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_1b2254552c4247b4873876eca107ae8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ea56356bb864c6b989dc8d418d8a202 = $(`<div id="html_5ea56356bb864c6b989dc8d418d8a202" style="width: 100.0%; height: 100.0%;">Fort Stanton, Ward: 8</div>`)[0];
+            popup_1b2254552c4247b4873876eca107ae8d.setContent(html_5ea56356bb864c6b989dc8d418d8a202);
+        
+
+        circle_marker_7dbce09457da469f8cb827d4df58d8fb.bindPopup(popup_1b2254552c4247b4873876eca107ae8d)
+        ;
+
+        
+    
+    
+            var circle_marker_f363d9f77ed94396b4d3d42556a7e398 = L.circleMarker(
+                [38.84107731, -76.99794993],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_5de49e996f5f41d89a63c7631bdaf886 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e4c1909401d4233b55ac158c9b299eb = $(`<div id="html_0e4c1909401d4233b55ac158c9b299eb" style="width: 100.0%; height: 100.0%;">Congress Heights, Ward: 8</div>`)[0];
+            popup_5de49e996f5f41d89a63c7631bdaf886.setContent(html_0e4c1909401d4233b55ac158c9b299eb);
+        
+
+        circle_marker_f363d9f77ed94396b4d3d42556a7e398.bindPopup(popup_5de49e996f5f41d89a63c7631bdaf886)
+        ;
+
+        
+    
+    
+            var circle_marker_98ffcabf4f69418c9f795be1631dc831 = L.circleMarker(
+                [38.83023741, -76.99563621],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_03ba5d88cdae49deac1a05cdd587c760 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7505ec1a1df418ea091e8923516ece1 = $(`<div id="html_b7505ec1a1df418ea091e8923516ece1" style="width: 100.0%; height: 100.0%;">Washington Highlands, Ward: 8</div>`)[0];
+            popup_03ba5d88cdae49deac1a05cdd587c760.setContent(html_b7505ec1a1df418ea091e8923516ece1);
+        
+
+        circle_marker_98ffcabf4f69418c9f795be1631dc831.bindPopup(popup_03ba5d88cdae49deac1a05cdd587c760)
+        ;
+
+        
+    
+    
+            var circle_marker_022aa008d03c470e8505f58f4d35d3bf = L.circleMarker(
+                [38.82695245, -77.00927076],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_b3a15be7d76347c3ba19a50870b33900 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95632b1c16a047bbae783567757bef73 = $(`<div id="html_95632b1c16a047bbae783567757bef73" style="width: 100.0%; height: 100.0%;">Bellevue, Ward: 8</div>`)[0];
+            popup_b3a15be7d76347c3ba19a50870b33900.setContent(html_95632b1c16a047bbae783567757bef73);
+        
+
+        circle_marker_022aa008d03c470e8505f58f4d35d3bf.bindPopup(popup_b3a15be7d76347c3ba19a50870b33900)
+        ;
+
+        
+    
+    
+            var circle_marker_d490504fa12e4e62adc86098d783edd0 = L.circleMarker(
+                [38.85368806, -76.96766003],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_a47c972722394695969894d983f4aeb3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fd093f5d6c849ecb01d543d37024266 = $(`<div id="html_4fd093f5d6c849ecb01d543d37024266" style="width: 100.0%; height: 100.0%;">Knox Hill/Buena Vista, Ward: 8</div>`)[0];
+            popup_a47c972722394695969894d983f4aeb3.setContent(html_4fd093f5d6c849ecb01d543d37024266);
+        
+
+        circle_marker_d490504fa12e4e62adc86098d783edd0.bindPopup(popup_a47c972722394695969894d983f4aeb3)
+        ;
+
+        
+    
+    
+            var circle_marker_f79945ac8e9a49f092974fc003f0633c = L.circleMarker(
+                [38.84686013, -76.97290234],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_46c2185eaccc4597b70755c9ce6445ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c42f0347546e440c88d1c0b6bff1699d = $(`<div id="html_c42f0347546e440c88d1c0b6bff1699d" style="width: 100.0%; height: 100.0%;">Shipley, Ward: 8</div>`)[0];
+            popup_46c2185eaccc4597b70755c9ce6445ba.setContent(html_c42f0347546e440c88d1c0b6bff1699d);
+        
+
+        circle_marker_f79945ac8e9a49f092974fc003f0633c.bindPopup(popup_46c2185eaccc4597b70755c9ce6445ba)
+        ;
+
+        
+    
+    
+            var circle_marker_405847f7f9364978bd03c2c23de1ad54 = L.circleMarker(
+                [38.84757145, -76.97964457],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_af1108e301d4408285162a9fd62c1f2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ffd7b34baf54c208640e4ea305ce9df = $(`<div id="html_0ffd7b34baf54c208640e4ea305ce9df" style="width: 100.0%; height: 100.0%;">Douglass, Ward: 8</div>`)[0];
+            popup_af1108e301d4408285162a9fd62c1f2f.setContent(html_0ffd7b34baf54c208640e4ea305ce9df);
+        
+
+        circle_marker_405847f7f9364978bd03c2c23de1ad54.bindPopup(popup_af1108e301d4408285162a9fd62c1f2f)
+        ;
+
+        
+    
+    
+            var circle_marker_6ed9f60ca67f4a8bb2e173c692a47b26 = L.circleMarker(
+                [38.85655424, -76.97392561],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_4a275310f85b4a86a20c2c4a2a98d2d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11a33a957184455ea70d04991cd2ec72 = $(`<div id="html_11a33a957184455ea70d04991cd2ec72" style="width: 100.0%; height: 100.0%;">Woodland, Ward: 8</div>`)[0];
+            popup_4a275310f85b4a86a20c2c4a2a98d2d4.setContent(html_11a33a957184455ea70d04991cd2ec72);
+        
+
+        circle_marker_6ed9f60ca67f4a8bb2e173c692a47b26.bindPopup(popup_4a275310f85b4a86a20c2c4a2a98d2d4)
+        ;
+
+        
+    
+    
+            var circle_marker_9b1a9ec7cfa745fd8456abfc1fda06b3 = L.circleMarker(
+                [38.85408512, -76.97221327],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_1c29143a0462403cb5dfdb81ee202c47 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e46add9e5c247ea84a82ebad28a8467 = $(`<div id="html_6e46add9e5c247ea84a82ebad28a8467" style="width: 100.0%; height: 100.0%;">Garfield Heights, Ward: 8</div>`)[0];
+            popup_1c29143a0462403cb5dfdb81ee202c47.setContent(html_6e46add9e5c247ea84a82ebad28a8467);
+        
+
+        circle_marker_9b1a9ec7cfa745fd8456abfc1fda06b3.bindPopup(popup_1c29143a0462403cb5dfdb81ee202c47)
+        ;
+
+        
+    
+    
+            var circle_marker_0c19e883b82043bba31da4249d298af4 = L.circleMarker(
+                [38.87263041, -76.96281843],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_ca8fba882b3e4e40854cb85e43ad0048 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e8431ab83b449f4bd4e9c4c5169688b = $(`<div id="html_5e8431ab83b449f4bd4e9c4c5169688b" style="width: 100.0%; height: 100.0%;">Dupont Park, Ward: 7</div>`)[0];
+            popup_ca8fba882b3e4e40854cb85e43ad0048.setContent(html_5e8431ab83b449f4bd4e9c4c5169688b);
+        
+
+        circle_marker_0c19e883b82043bba31da4249d298af4.bindPopup(popup_ca8fba882b3e4e40854cb85e43ad0048)
+        ;
+
+        
+    
+    
+            var circle_marker_ba667f368910420d9beb80713a3a0a20 = L.circleMarker(
+                [38.87558791, -76.96084721],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_7b186bbe86a04571844a1ff04d69bcf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e25e24cf216141ff80137561c5865d52 = $(`<div id="html_e25e24cf216141ff80137561c5865d52" style="width: 100.0%; height: 100.0%;">Twining, Ward: 7</div>`)[0];
+            popup_7b186bbe86a04571844a1ff04d69bcf5.setContent(html_e25e24cf216141ff80137561c5865d52);
+        
+
+        circle_marker_ba667f368910420d9beb80713a3a0a20.bindPopup(popup_7b186bbe86a04571844a1ff04d69bcf5)
+        ;
+
+        
+    
+    
+            var circle_marker_20e9abce13184a90872ae896f6d9b424 = L.circleMarker(
+                [38.86933565, -76.96580364],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_e84df4342fec4418bb1a3f6481df68d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c29a13be3124c0ea0f7dc9106695df2 = $(`<div id="html_1c29a13be3124c0ea0f7dc9106695df2" style="width: 100.0%; height: 100.0%;">Randle Highlands, Ward: 7</div>`)[0];
+            popup_e84df4342fec4418bb1a3f6481df68d2.setContent(html_1c29a13be3124c0ea0f7dc9106695df2);
+        
+
+        circle_marker_20e9abce13184a90872ae896f6d9b424.bindPopup(popup_e84df4342fec4418bb1a3f6481df68d2)
+        ;
+
+        
+    
+    
+            var circle_marker_306a1d24179240d38ab4909bfef58e86 = L.circleMarker(
+                [38.8691585, -76.97745178],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_50d9ee5f34354110bf8cb6efc4c0e72f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d16056d87414591b3cdf9d7ef23f72b = $(`<div id="html_3d16056d87414591b3cdf9d7ef23f72b" style="width: 100.0%; height: 100.0%;">Fairlawn, Ward: 8</div>`)[0];
+            popup_50d9ee5f34354110bf8cb6efc4c0e72f.setContent(html_3d16056d87414591b3cdf9d7ef23f72b);
+        
+
+        circle_marker_306a1d24179240d38ab4909bfef58e86.bindPopup(popup_50d9ee5f34354110bf8cb6efc4c0e72f)
+        ;
+
+        
+    
+    
+            var circle_marker_8798d638b6534527b2fdf0f14ab2e420 = L.circleMarker(
+                [38.86956018, -76.95342386],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_6bbf555a8e4b434da27dabcfb1e82287 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_516af3268f864e22840338468df98a11 = $(`<div id="html_516af3268f864e22840338468df98a11" style="width: 100.0%; height: 100.0%;">Penn Branch, Ward: 7</div>`)[0];
+            popup_6bbf555a8e4b434da27dabcfb1e82287.setContent(html_516af3268f864e22840338468df98a11);
+        
+
+        circle_marker_8798d638b6534527b2fdf0f14ab2e420.bindPopup(popup_6bbf555a8e4b434da27dabcfb1e82287)
+        ;
+
+        
+    
+    
+            var circle_marker_f2bbca9000604eff9d8614371a5d7c06 = L.circleMarker(
+                [38.85925526, -76.99728051],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_de4f683bb70040b5aa29897eeb217ad2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb9b84c300aa4beb8bb2613abfec6683 = $(`<div id="html_fb9b84c300aa4beb8bb2613abfec6683" style="width: 100.0%; height: 100.0%;">Barry Farm, Ward: 8</div>`)[0];
+            popup_de4f683bb70040b5aa29897eeb217ad2.setContent(html_fb9b84c300aa4beb8bb2613abfec6683);
+        
+
+        circle_marker_f2bbca9000604eff9d8614371a5d7c06.bindPopup(popup_de4f683bb70040b5aa29897eeb217ad2)
+        ;
+
+        
+    
+    
+            var circle_marker_d710388df12b4e8f9db72c9cd26b5390 = L.circleMarker(
+                [38.86318571, -76.98467764],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_bc836896f90b4f4ead63f1b9be97dd41 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab07aa736c4d46348b7abe3518d36178 = $(`<div id="html_ab07aa736c4d46348b7abe3518d36178" style="width: 100.0%; height: 100.0%;">Historic Anacostia, Ward: 8</div>`)[0];
+            popup_bc836896f90b4f4ead63f1b9be97dd41.setContent(html_ab07aa736c4d46348b7abe3518d36178);
+        
+
+        circle_marker_d710388df12b4e8f9db72c9cd26b5390.bindPopup(popup_bc836896f90b4f4ead63f1b9be97dd41)
+        ;
+
+        
+    
+    
+            var circle_marker_4459a156264b4d36a6f1741ae19feddd = L.circleMarker(
+                [38.91067876, -76.93858599],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_cc38fc1067ab443b9c609c1d7782227f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c841427977574a7b9f9994ea626dafa5 = $(`<div id="html_c841427977574a7b9f9994ea626dafa5" style="width: 100.0%; height: 100.0%;">Kenilworth, Ward: 7</div>`)[0];
+            popup_cc38fc1067ab443b9c609c1d7782227f.setContent(html_c841427977574a7b9f9994ea626dafa5);
+        
+
+        circle_marker_4459a156264b4d36a6f1741ae19feddd.bindPopup(popup_cc38fc1067ab443b9c609c1d7782227f)
+        ;
+
+        
+    
+    
+            var circle_marker_3ef0859845834a96adc31996354a1c62 = L.circleMarker(
+                [38.9053294, -76.94307039],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_15388cadcad2485393fa4cb9a35fbc58 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f56bbfe9e8f4c20908a75151248424b = $(`<div id="html_0f56bbfe9e8f4c20908a75151248424b" style="width: 100.0%; height: 100.0%;">Eastland Gardens, Ward: 7</div>`)[0];
+            popup_15388cadcad2485393fa4cb9a35fbc58.setContent(html_0f56bbfe9e8f4c20908a75151248424b);
+        
+
+        circle_marker_3ef0859845834a96adc31996354a1c62.bindPopup(popup_15388cadcad2485393fa4cb9a35fbc58)
+        ;
+
+        
+    
+    
+            var circle_marker_fcfc0bc813a94efabcc59aafb793e10b = L.circleMarker(
+                [38.90410727, -76.93280089],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_61fccb390bcd4a7cb4b957c3da5ab14f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b0d6ff520ba45a081430d897def0812 = $(`<div id="html_5b0d6ff520ba45a081430d897def0812" style="width: 100.0%; height: 100.0%;">Deanwood, Ward: 7</div>`)[0];
+            popup_61fccb390bcd4a7cb4b957c3da5ab14f.setContent(html_5b0d6ff520ba45a081430d897def0812);
+        
+
+        circle_marker_fcfc0bc813a94efabcc59aafb793e10b.bindPopup(popup_61fccb390bcd4a7cb4b957c3da5ab14f)
+        ;
+
+        
+    
+    
+            var circle_marker_39fc21153e8b43769418941eac5aca47 = L.circleMarker(
+                [38.8860167, -76.95068459],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_c78e13de1dcb4c60968243cbc1de87ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3fe6a80477244e2386f4605d57a1c779 = $(`<div id="html_3fe6a80477244e2386f4605d57a1c779" style="width: 100.0%; height: 100.0%;">Fort Dupont, Ward: 7</div>`)[0];
+            popup_c78e13de1dcb4c60968243cbc1de87ab.setContent(html_3fe6a80477244e2386f4605d57a1c779);
+        
+
+        circle_marker_39fc21153e8b43769418941eac5aca47.bindPopup(popup_c78e13de1dcb4c60968243cbc1de87ab)
+        ;
+
+        
+    
+    
+            var circle_marker_7b0108c8c8eb4e418cc29e3d47bb063b = L.circleMarker(
+                [38.88478751, -76.96018093],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_f268a42224004232a3d3fdc248e21842 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_206670b223b640deb3a2ee4d3ab15abf = $(`<div id="html_206670b223b640deb3a2ee4d3ab15abf" style="width: 100.0%; height: 100.0%;">Greenway, Ward: 7</div>`)[0];
+            popup_f268a42224004232a3d3fdc248e21842.setContent(html_206670b223b640deb3a2ee4d3ab15abf);
+        
+
+        circle_marker_7b0108c8c8eb4e418cc29e3d47bb063b.bindPopup(popup_f268a42224004232a3d3fdc248e21842)
+        ;
+
+        
+    
+    
+            var circle_marker_85152d7516944a0dbe402c3fd61e4df5 = L.circleMarker(
+                [38.85672443, -76.96304603],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_6027a2e2567f4343bc9ce3b644d9dbff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_935238afcb4b4d7685ec523f4f699c8e = $(`<div id="html_935238afcb4b4d7685ec523f4f699c8e" style="width: 100.0%; height: 100.0%;">Naylor Gardens, Ward: 7</div>`)[0];
+            popup_6027a2e2567f4343bc9ce3b644d9dbff.setContent(html_935238afcb4b4d7685ec523f4f699c8e);
+        
+
+        circle_marker_85152d7516944a0dbe402c3fd61e4df5.bindPopup(popup_6027a2e2567f4343bc9ce3b644d9dbff)
+        ;
+
+        
+    
+    
+            var circle_marker_b9bb38394df746cbbc4be1969accb062 = L.circleMarker(
+                [38.85842336, -76.99056102],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_2f9b4981c4e9459a9d7b4284f39c256c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_893946cbf7104961b916edbd0f27d183 = $(`<div id="html_893946cbf7104961b916edbd0f27d183" style="width: 100.0%; height: 100.0%;">Hillsdale, Ward: 8</div>`)[0];
+            popup_2f9b4981c4e9459a9d7b4284f39c256c.setContent(html_893946cbf7104961b916edbd0f27d183);
+        
+
+        circle_marker_b9bb38394df746cbbc4be1969accb062.bindPopup(popup_2f9b4981c4e9459a9d7b4284f39c256c)
+        ;
+
+        
+    
+    
+            var circle_marker_04fe530576ce48569c97b638ccc596f2 = L.circleMarker(
+                [38.8811615, -76.93820271],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_9a53de7449c14fd79d90879292aa015a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d192283d2aee46b99f31e5f46b11462c = $(`<div id="html_d192283d2aee46b99f31e5f46b11462c" style="width: 100.0%; height: 100.0%;">Benning Ridge, Ward: 7</div>`)[0];
+            popup_9a53de7449c14fd79d90879292aa015a.setContent(html_d192283d2aee46b99f31e5f46b11462c);
+        
+
+        circle_marker_04fe530576ce48569c97b638ccc596f2.bindPopup(popup_9a53de7449c14fd79d90879292aa015a)
+        ;
+
+        
+    
+    
+            var circle_marker_e06e2ca99dc54511a6b09980de3e056a = L.circleMarker(
+                [38.86026696, -76.97170298],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_a123e87a51bb4405a43a2698071f7156 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68b2d1e5152147059179cfdc858e8b68 = $(`<div id="html_68b2d1e5152147059179cfdc858e8b68" style="width: 100.0%; height: 100.0%;">Skyland, Ward: 8</div>`)[0];
+            popup_a123e87a51bb4405a43a2698071f7156.setContent(html_68b2d1e5152147059179cfdc858e8b68);
+        
+
+        circle_marker_e06e2ca99dc54511a6b09980de3e056a.bindPopup(popup_a123e87a51bb4405a43a2698071f7156)
+        ;
+
+        
+    
+    
+            var circle_marker_dd059f4b495c4e788352b34a49f7f8ea = L.circleMarker(
+                [38.90111564, -76.95129459],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_4970e348a0e64b5fa92201afaf317f3b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec704c7681cf44c2b3263e281f366e6f = $(`<div id="html_ec704c7681cf44c2b3263e281f366e6f" style="width: 100.0%; height: 100.0%;">Mayfair, Ward: 7</div>`)[0];
+            popup_4970e348a0e64b5fa92201afaf317f3b.setContent(html_ec704c7681cf44c2b3263e281f366e6f);
+        
+
+        circle_marker_dd059f4b495c4e788352b34a49f7f8ea.bindPopup(popup_4970e348a0e64b5fa92201afaf317f3b)
+        ;
+
+        
+    
+    
+            var circle_marker_51f9dde03fc34966a8b7bcbb5d824da1 = L.circleMarker(
+                [38.89370455, -76.95768066],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_6d112d0db9b74e33b744b764bf74b65a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc0a22f16d8c49c8a57f2f2398451976 = $(`<div id="html_dc0a22f16d8c49c8a57f2f2398451976" style="width: 100.0%; height: 100.0%;">River Terrace, Ward: 7</div>`)[0];
+            popup_6d112d0db9b74e33b744b764bf74b65a.setContent(html_dc0a22f16d8c49c8a57f2f2398451976);
+        
+
+        circle_marker_51f9dde03fc34966a8b7bcbb5d824da1.bindPopup(popup_6d112d0db9b74e33b744b764bf74b65a)
+        ;
+
+        
+    
+    
+            var circle_marker_2a1ff1b8ec37404498385e4ba4c6babd = L.circleMarker(
+                [38.90024299, -76.92180247],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_340c04bfeb1044ec8ca5bbb2a3815b8b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f27891481a0d4c17b724dd9d40694a82 = $(`<div id="html_f27891481a0d4c17b724dd9d40694a82" style="width: 100.0%; height: 100.0%;">Burrville, Ward: 7</div>`)[0];
+            popup_340c04bfeb1044ec8ca5bbb2a3815b8b.setContent(html_f27891481a0d4c17b724dd9d40694a82);
+        
+
+        circle_marker_2a1ff1b8ec37404498385e4ba4c6babd.bindPopup(popup_340c04bfeb1044ec8ca5bbb2a3815b8b)
+        ;
+
+        
+    
+    
+            var circle_marker_091556e97e32426495ef468f8d63c8fd = L.circleMarker(
+                [38.89545082, -76.91738943],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_df8f051c35be436293be9122bd22620b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46dc4b6bbcbf4991b6fa24078110e378 = $(`<div id="html_46dc4b6bbcbf4991b6fa24078110e378" style="width: 100.0%; height: 100.0%;">NE Boundary, Ward: 7</div>`)[0];
+            popup_df8f051c35be436293be9122bd22620b.setContent(html_46dc4b6bbcbf4991b6fa24078110e378);
+        
+
+        circle_marker_091556e97e32426495ef468f8d63c8fd.bindPopup(popup_df8f051c35be436293be9122bd22620b)
+        ;
+
+        
+    
+    
+            var circle_marker_dccb79c542f44bff935e5785cf76d4e9 = L.circleMarker(
+                [38.8918849, -76.94888362],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_829fd4f9a88047a996a5028f0bfbc253 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7776e853ad1f4423a8494055967dda07 = $(`<div id="html_7776e853ad1f4423a8494055967dda07" style="width: 100.0%; height: 100.0%;">Benning, Ward: 7</div>`)[0];
+            popup_829fd4f9a88047a996a5028f0bfbc253.setContent(html_7776e853ad1f4423a8494055967dda07);
+        
+
+        circle_marker_dccb79c542f44bff935e5785cf76d4e9.bindPopup(popup_829fd4f9a88047a996a5028f0bfbc253)
+        ;
+
+        
+    
+    
+            var circle_marker_75aa45da28b84f8abfb224c76b3f78bb = L.circleMarker(
+                [38.8927065, -76.92063844],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_356b48b1e3e44403a1a1cb0fe7bf7bb7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4b5dd7199f254af3905e8a93c3146344 = $(`<div id="html_4b5dd7199f254af3905e8a93c3146344" style="width: 100.0%; height: 100.0%;">Grant Park, Ward: 7</div>`)[0];
+            popup_356b48b1e3e44403a1a1cb0fe7bf7bb7.setContent(html_4b5dd7199f254af3905e8a93c3146344);
+        
+
+        circle_marker_75aa45da28b84f8abfb224c76b3f78bb.bindPopup(popup_356b48b1e3e44403a1a1cb0fe7bf7bb7)
+        ;
+
+        
+    
+    
+            var circle_marker_9e3ae0fe51d7498892bce5bc19b5938c = L.circleMarker(
+                [38.89703455, -76.94227676],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_c27bccc67bf04674a9ed7fc90add04c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4dadd955d6824478a1e68cfe6ce7c9c3 = $(`<div id="html_4dadd955d6824478a1e68cfe6ce7c9c3" style="width: 100.0%; height: 100.0%;">Central NE, Ward: 7</div>`)[0];
+            popup_c27bccc67bf04674a9ed7fc90add04c8.setContent(html_4dadd955d6824478a1e68cfe6ce7c9c3);
+        
+
+        circle_marker_9e3ae0fe51d7498892bce5bc19b5938c.bindPopup(popup_c27bccc67bf04674a9ed7fc90add04c8)
+        ;
+
+        
+    
+    
+            var circle_marker_493e83c8449c4c42a962a1542a0466e0 = L.circleMarker(
+                [38.89580517, -76.93109656],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_7c0bb62982c14659817c0a1dccde4bca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_126af8b26fdb47fc87444a3cd236d407 = $(`<div id="html_126af8b26fdb47fc87444a3cd236d407" style="width: 100.0%; height: 100.0%;">Lincoln Heights, Ward: 7</div>`)[0];
+            popup_7c0bb62982c14659817c0a1dccde4bca.setContent(html_126af8b26fdb47fc87444a3cd236d407);
+        
+
+        circle_marker_493e83c8449c4c42a962a1542a0466e0.bindPopup(popup_7c0bb62982c14659817c0a1dccde4bca)
+        ;
+
+        
+    
+    
+            var circle_marker_42fdf628810342bdafc792ce563f3981 = L.circleMarker(
+                [38.88997845, -76.92708591],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_b4ff18c0757841dca9663d6098575c13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9057421f6b054374aaf4236b2a6843cf = $(`<div id="html_9057421f6b054374aaf4236b2a6843cf" style="width: 100.0%; height: 100.0%;">Capitol View, Ward: 7</div>`)[0];
+            popup_b4ff18c0757841dca9663d6098575c13.setContent(html_9057421f6b054374aaf4236b2a6843cf);
+        
+
+        circle_marker_42fdf628810342bdafc792ce563f3981.bindPopup(popup_b4ff18c0757841dca9663d6098575c13)
+        ;
+
+        
+    
+    
+            var circle_marker_36f92267f90a437b9c536a713c59b799 = L.circleMarker(
+                [38.88437194, -76.92912172],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_39e43e19b7c844b4a518ae9f90614616 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a49026c943e94029a8c329d6fbcf1abd = $(`<div id="html_a49026c943e94029a8c329d6fbcf1abd" style="width: 100.0%; height: 100.0%;">Marshall Heights, Ward: 7</div>`)[0];
+            popup_39e43e19b7c844b4a518ae9f90614616.setContent(html_a49026c943e94029a8c329d6fbcf1abd);
+        
+
+        circle_marker_36f92267f90a437b9c536a713c59b799.bindPopup(popup_39e43e19b7c844b4a518ae9f90614616)
+        ;
+
+        
+    
+    
+            var circle_marker_8ba8e900fab5454fa8c5f02cb5cc396b = L.circleMarker(
+                [38.86890119, -76.94466984],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_8d722a3f6ac947189613888795cb4c67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c333e300a1034090aaea254364ef5631 = $(`<div id="html_c333e300a1034090aaea254364ef5631" style="width: 100.0%; height: 100.0%;">Fort Davis Park, Ward: 7</div>`)[0];
+            popup_8d722a3f6ac947189613888795cb4c67.setContent(html_c333e300a1034090aaea254364ef5631);
+        
+
+        circle_marker_8ba8e900fab5454fa8c5f02cb5cc396b.bindPopup(popup_8d722a3f6ac947189613888795cb4c67)
+        ;
+
+        
+    
+    
+            var circle_marker_bfae4518c2174dfc99776ddeaac48d34 = L.circleMarker(
+                [38.86345267, -76.95163007],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_ae2ed7e671d34864bac0c4ce0596f72e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5fa0d2629cab44bca964c08bcdddc740 = $(`<div id="html_5fa0d2629cab44bca964c08bcdddc740" style="width: 100.0%; height: 100.0%;">Fairfax Village, Ward: 7</div>`)[0];
+            popup_ae2ed7e671d34864bac0c4ce0596f72e.setContent(html_5fa0d2629cab44bca964c08bcdddc740);
+        
+
+        circle_marker_bfae4518c2174dfc99776ddeaac48d34.bindPopup(popup_ae2ed7e671d34864bac0c4ce0596f72e)
+        ;
+
+        
+    
+    
+            var circle_marker_ef1f8a7b14cc4634aa46e882885db5cf = L.circleMarker(
+                [38.86179449, -76.96068825],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+    
+        var popup_7818cef1bd3941feba4e76e01338464f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f97152846aa94f1abad5949525020d1e = $(`<div id="html_f97152846aa94f1abad5949525020d1e" style="width: 100.0%; height: 100.0%;">Hillcrest, Ward: 7</div>`)[0];
+            popup_7818cef1bd3941feba4e76e01338464f.setContent(html_f97152846aa94f1abad5949525020d1e);
+        
+
+        circle_marker_ef1f8a7b14cc4634aa46e882885db5cf.bindPopup(popup_7818cef1bd3941feba4e76e01338464f)
+        ;
+
+        
+    
+    
+            var heat_map_ca4008fc838b4bcbaf6fad09dc203b25 = L.heatLayer(
+                [[38.857484, -76.985563], [38.84422, -76.99859599999999], [38.844275, -76.998602], [38.84279, -77.00026], [38.827109906998096, -76.995000069129], [38.8284229284943, -76.99149809989592], [38.82502125, -77.0133422], [38.824579215451344, -77.01331210453297], [38.831171000000005, -77.00872], [38.83120773540685, -77.00865213354547], [38.82465472067468, -77.01257540215549], [38.849256, -76.980631], [38.846218, -76.98097], [38.85241664397566, -76.97395694411372], [38.857785, -76.97030500000001], [38.858658149001826, -76.97134137153625], [38.85241664397566, -76.97395694411372], [38.857785, -76.97030500000001], [38.872199996716276, -76.96713303846796], [38.869607, -76.95936999999999], [38.872207, -76.968334], [38.874848, -76.9563639], [38.86793518066406, -76.97005462646484], [38.86787474155426, -76.97005927562714], [38.86789137008017, -76.97051409798975], [38.872199996716276, -76.96713303846796], [38.872207, -76.968334], [38.86608491368281, -76.94985419511795], [38.866434, -76.949761], [38.86869585299129, -76.95836723303448], [38.866077000000004, -76.94986], [38.856626907359235, -76.9986446992371], [38.86304948985858, -76.98366573641054], [38.866109974567536, -76.98532104492188], [38.86631, -76.98489], [38.86467313624476, -76.98991298675536], [38.864405, -76.989673], [38.864532, -76.989685], [38.857484, -76.985563], [38.860649360747395, -76.96933833251485], [38.860658, -76.969288], [38.86355997838268, -76.9750707852731], [38.862144050743105, -76.96953523182971], [38.857785, -76.97030500000001], [38.858658149001826, -76.97134137153625], [38.900457851225646, -76.94741946056197], [38.900282000000004, -76.94734100000001], [38.89388260308933, -76.95293831714554], [38.897187, -76.914458], [38.897187, -76.914458], [38.893303, -76.947712], [38.894225, -76.949396], [38.893822, -76.951045], [38.894573, -76.94913100000001], [38.894191, -76.950929], [38.89467363727835, -76.95021629333496], [38.89388260308933, -76.95293831714554], [38.892884, -76.950379], [38.89445247406899, -76.94880280264388], [38.893906057224214, -76.9510939511835], [38.894412, -76.950239], [38.893961, -76.951374], [38.8940819, -76.94951619999999], [38.9006621327833, -76.94317309187203], [38.89922966064627, -76.9286521258763], [38.86608491368281, -76.94985419511795], [38.866434, -76.949761], [38.863269684733424, -76.94592475891113], [38.866077000000004, -76.94986]],
+                {"blur": 15, "max": 1.0, "maxZoom": 18, "minOpacity": 0.5, "radius": 35}
+            ).addTo(map_fea91217c72a451598862d32c8a48db5);
+        
+</script>
